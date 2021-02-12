@@ -1,0 +1,32 @@
+<div class="card address-input-area">
+    <div class="card-wrapper" *ngrxLet="valid$; let valid">
+        <div class="card-header">
+            Customer Address Entry
+        </div>
+        <div class="card-body">
+            <app-address-form (formValue$)="$formValue.next($event)"
+                              (formValid$)="valid$.next($event)"></app-address-form>
+        </div>
+        <div class="card-footer" *ngIf="!valid">
+            <div class="message warning">
+                <span>Please fill in all customer details correctly</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card customer-label" *ngrxLet="$formValue; let address;">
+    <div class="card-wrapper">
+        <div class="card-header">
+            Delivery Label
+        </div>
+        <div class="card-body">
+            <app-send-label [address]="address" [deliveryInfo]="deliveryInfo$ | async"></app-send-label>
+        </div>
+        <div class="card-footer" *ngrxLet="valid$; let valid;">
+            <button class="primary" [ngClass]="{'disabled' :!valid}" [disabled]="!valid" (click)="print()">Print Label
+            </button>
+            <button class="primary" [ngClass]="{'disabled' :!valid}" [disabled]="!valid">Goto Package Sending</button>
+        </div>
+    </div>
+</div>

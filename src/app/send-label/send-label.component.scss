@@ -1,0 +1,21 @@
+.label {
+  @apply grid grid-cols-3 gap-1
+}
+
+.qr-code {
+  max-width: 180px;
+  max-height: 180px;
+  margin: 0 auto;
+}
+
+.address {
+  @apply border-2 border-gray-200 p-1.5 h-60 rounded-2xl overflow-clip 2xl:break-words
+}
+
+dl {
+  @apply text-center
+}
+
+.postage {
+  @apply border-2 border-gray-700 p-1.5 h-60 rounded-2xl
+}

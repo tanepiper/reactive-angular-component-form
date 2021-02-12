@@ -1,0 +1,36 @@
+<div *ngrxLet="fieldStates$; let fieldStates" class="address-input">
+    <fieldset [formGroup]="formData">
+        <legend>Address Input</legend>
+        <div class="form-field">
+            <label for="address1">Address 1</label>
+            <input type="text" id="address1" class="form-input" formControlName="address1"
+                   [ngClass]="{'error': fieldStates['address1']}"/>
+        </div>
+        <div class="form-field">
+            <label for="address2">Address 2</label>
+            <input type="text" id="address2" class="form-input" formControlName="address2"
+                   [ngClass]="{'error': fieldStates['address2']}"/>
+        </div>
+        <div class="form-field">
+            <label for="city">City</label>
+            <input type="text" id="city" class="form-input" formControlName="city"
+                   [ngClass]="{'error': fieldStates['city']}"/>
+        </div>
+        <div class="form-field">
+            <label for="country">Country</label>
+            <select id="country" class="form-input" formControlName="country"
+                    [ngClass]="{'error': fieldStates['country']}">
+                <option value="Belgium">Belgium</option>
+                <option value="France">France</option>
+                <option value="The Netherlands">The Netherlands</option>
+                <option value="United Kingdom">United Kingdom</option>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="postcode">Postcode</label>
+            <input type="text" id="postcode" class="form-input" formControlName="postcode"
+                   [ngClass]="{'error': fieldStates['postcode']}"/>
+        </div>
+
+    </fieldset>
+</div>

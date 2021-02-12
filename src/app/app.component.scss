@@ -1,0 +1,56 @@
+:host {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  flex: 1;
+  @apply max-w-2xl mx-auto sm:px-6 lg:px-8;
+}
+
+.card-wrapper {
+  @apply overflow-hidden shadow-md;
+}
+
+.card-header {
+  @apply px-6 py-4 bg-white border-b border-gray-200 font-bold uppercase;
+}
+
+.card-body {
+  @apply p-6 bg-white border-b border-gray-200;
+}
+
+.card-footer {
+  @apply p-6 bg-white border-gray-200 text-right;
+}
+
+.card-footer button.primary {
+  @apply bg-blue-500 shadow-md text-sm text-white font-bold py-3 md:px-8 px-4 hover:bg-blue-400 rounded uppercase ml-4;
+
+  &.disabled {
+    @apply bg-gray-600
+  }
+}
+
+.warning {
+  @apply py-3 px-2 my-2 bg-yellow-300 text-yellow-800 rounded border border-yellow-600
+}
+
+
+@media print {
+  button,
+  app-address-form,
+  .card-header,
+  .card-footer,
+  .message {
+    display: none;
+  }
+
+  .card {
+    border: none;
+  }
+
+  .label .address {
+    transform: none;
+  }
+}

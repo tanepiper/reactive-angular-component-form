@@ -1,0 +1,33 @@
+<div class="label">
+    <div class="address">
+        <div class="customer-name">Acme Co</div>
+        <div class="address-display" *ngIf="address">
+            <div class="customer-address">
+                {{address.address1}} {{address.address2}}
+            </div>
+            <div class="cutomer-area">{{address.city}} {{address.postcode}}</div>
+            <div class="customer-country">{{address.country}}</div>
+        </div>
+    </div>
+    <div class="delivery-info">
+        <strong>Delivery Details</strong>
+        <div *ngIf="!deliveryInfo">
+            Enter customer details to generate QR Code
+        </div>
+
+        <ng-container *ngIf="deliveryInfo">
+            <canvas #qrCodeEl class="qr-code"></canvas>
+            <div class="text">
+                <dl>
+                    <dt>Delivery Date</dt>
+                    <dd>{{deliveryInfo.deliveryDate}}</dd>
+                    <dt>Expected Date</dt>
+                    <dd>{{deliveryInfo.expectedDate}}</dd>
+                </dl>
+            </div>
+        </ng-container>
+    </div>
+    <div class="postage">
+        <strong>Attach Postage Here</strong>
+    </div>
+</div>

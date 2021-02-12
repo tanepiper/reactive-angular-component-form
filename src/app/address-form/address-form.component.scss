@@ -1,0 +1,80 @@
+:host {
+  display: contents;
+}
+
+.address-input {
+  @apply flex items-center justify-center;
+}
+
+fieldset {
+  @apply bg-white shadow-md rounded w-full
+}
+
+.form-field {
+  @apply mb-4
+}
+
+.error {
+  @apply border-red-600 border
+}
+
+.form-field label {
+  @apply block text-gray-700 text-sm font-bold mb-2
+}
+
+.form-field input, .form-field select {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none
+}
+
+//.address-input {
+//  @apply mt-5 md:mt-0 md:col-span-2
+//}
+//
+//.form-outer {
+//  @apply shadow sm:rounded-md sm:overflow-hidden
+//}
+//
+//.form-wrapper {
+//  @apply px-4 py-5 bg-white space-y-6 sm:p-6;
+//}
+//
+//fieldset {
+//  @apply grid grid-cols-3 gap-6;
+//}
+//
+//.form-field {
+//  @apply col-span-3 sm:col-span-2;
+//}
+//
+//.input {
+//
+//}
+//
+////.error {
+////  border: 1px solid red;
+////}
+////
+////.form-field {
+////  display: flex;
+////  flex-direction: row;
+////  justify-content: flex-start;
+////}
+////
+////.form-field * {
+////  flex: 1;
+////}
+////
+////.form-field label {
+////  flex: 0.3;
+////}
+////
+////.form-field input,
+////.form-field select {
+////  flex: 0.6;
+////  margin: 0 auto;
+////}
+////
+////.address-input {
+////  max-width: 640px;
+////  margin: 20px auto;
+////}
